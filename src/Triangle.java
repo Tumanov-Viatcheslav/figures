@@ -6,7 +6,7 @@ public class Triangle extends Figure {
     }
 
     public double area() {
-        double semiPerimeter = perimeter() / 2;
+        double semiPerimeter = perimeter() / 2.0;
         return Math.sqrt(semiPerimeter * (semiPerimeter - a) * (semiPerimeter - b) * (semiPerimeter - c));
     }
 
