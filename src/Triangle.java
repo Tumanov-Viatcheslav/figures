@@ -11,6 +11,8 @@ public class Triangle extends Figure {
     }
 
     public Triangle(int a, int b, int c) {
+        if (a <= 0 || b <= 0 || c <= 0)
+            throw new RuntimeException("Triangle's side should be positive");
         this.a = a;
         this.b = b;
         this.c = c;

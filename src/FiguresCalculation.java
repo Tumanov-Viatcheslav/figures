@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class FiguresCalculation {
 
-    private static void readDataFromFile(FiguresInputData data) {
-        try(BufferedReader input = new BufferedReader(new FileReader("input.txt"))) {
+    private static void readDataFromFile(FiguresInputData data, String file) {
+        try(BufferedReader input = new BufferedReader(new FileReader(file))) {
             String line;
             String[] dividedLine;
 
@@ -51,7 +51,7 @@ public class FiguresCalculation {
         FiguresInputData data = new FiguresInputData();
         String result;
 
-        readData(data);
+        readDataFromFile(data, "input.txt");
 
         Triangle tr = new Triangle(data.aTriangle, data.bTriangle, data.cTriangle);
         Rectangle rect = new Rectangle(data.aRectangle, data.bRectangle);
