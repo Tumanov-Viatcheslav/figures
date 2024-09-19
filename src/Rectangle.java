@@ -1,7 +1,7 @@
 public class Rectangle extends Figure {
-    int a, b;
+    double a, b;
 
-    public int perimeter() {
+    public double perimeter() {
         return 2 * (a + b);
     }
 
@@ -9,7 +9,7 @@ public class Rectangle extends Figure {
         return a * b;
     }
 
-    public Rectangle(int a, int b) {
+    public Rectangle(double a, double b) {
         if (a <= 0 || b <= 0)
             throw new RuntimeException("Rectangle's side should be positive");
         this.a = a;
