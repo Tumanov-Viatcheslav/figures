@@ -89,7 +89,7 @@ public class FiguresCalculation {
         //Figure[] toCalculate = {tr, rect};
         Figure[] toCalculate = figures;
 
-        Arrays.sort(toCalculate);
+        Arrays.sort(toCalculate, new FiguresAreaComparator());
         result = "Figures' perimeters: ";
         for (Figure fig: toCalculate) {
             result += fig.perimeter() + " ";
